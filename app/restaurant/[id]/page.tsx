@@ -18,7 +18,10 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
       id,
     },
     include: {
-      category: {
+      categories: {
+        orderBy: {
+          createdAt: "desc",
+        },
         include: {
           products: {
             where: {
@@ -75,7 +78,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
           <DeliveryInfo restaurant={restaurant} />
         </div>
         <div className="mt-3 flex overflow-x-scroll px-5 [&::-webkit-scrollbar]:hidden">
-          {restaurant.category.map((category) => (
+          {restaurant.categories.map((category) => (
             <div
               className="min-w-[167px] gap-4 rounded-lg bg-[#F4F4F4] text-center"
               key={category.id}
@@ -92,7 +95,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
           <ProductList products={restaurant.products} />
         </div>
         <div className="mt-6 space-y-4">
-          {restaurant.category.map((category) => (
+          {restaurant.categories.map((category) => (
             <div key={category.id}>
               <h2 className="px-5 font-semibold">{category.name}</h2>
               <ProductList products={category.products} />
