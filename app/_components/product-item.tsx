@@ -27,14 +27,10 @@ const ProductItem = ({ product }: ProductItemProps) => {
             fill
             className="rounded-lg object-cover shadow-md"
           />
-          {/* {
-            corrigir valores do db
-            product.discountPercentage && (
-              <DiscountPercentage product={product} /> 
-            )
-          } */}
           <div className="absolute left-2 top-2">
-            <DiscountPercentage product={product} />
+            {product.discountPercentage > 0 && (
+              <DiscountPercentage product={product} />
+            )}
           </div>
         </div>
 
