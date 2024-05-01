@@ -121,7 +121,7 @@ const ProductDetails = ({
           </div>
           <div className="flex flex-col items-center">
             <div className="flex items-center gap-1 text-muted-foreground">
-              <span className="text-sx">Entrega</span>
+              <span className="text-sx">Tempo</span>
               <TimerIcon size={14} />
             </div>
             {Number(product.restaurant.deliveryTimeMinutes)} min
