@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 "use client";
 
 import { Prisma } from "@prisma/client";
@@ -22,6 +23,7 @@ interface ICartContext {
   subTotalPrice: number;
   totalPrice: number;
   totalDiscounts: number;
+  totalQuantityProducts: number;
   // eslint-disable-next-line no-unused-vars
   addProductToCart: ({
     product,
@@ -53,6 +55,7 @@ export const CartContext = createContext<ICartContext>({
   subTotalPrice: 0,
   totalPrice: 0,
   totalDiscounts: 0,
+  totalQuantityProducts: 0,
   addProductToCart: () => {},
   decreaseProductQuantity: () => {},
   increaseProductQuantity: () => {},
@@ -61,6 +64,12 @@ export const CartContext = createContext<ICartContext>({
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<CartProduct[]>([]);
+
+  const totalQuantityProducts = useMemo(() => {
+    return products.reduce((acc, product) => {
+      return acc + product.quantity;
+    }, 0);
+  }, [products]);
 
   const subTotalPrice = useMemo(() => {
     return products.reduce((acc, product) => {
@@ -172,6 +181,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         subTotalPrice,
         totalPrice,
         totalDiscounts,
+        totalQuantityProducts,
       }}
     >
       {children}
