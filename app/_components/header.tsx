@@ -1,9 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 const Header = () => {
+  const handleSignInClick = () => {
+    signIn("google");
+  };
+
   return (
     <div className="flex justify-between px-5 pt-6">
       <Link href="/">
@@ -16,6 +23,7 @@ const Header = () => {
           />
         </div>
       </Link>
+      <Button onClick={handleSignInClick}>Login</Button>
       <Button
         size="icon"
         variant="outline"
