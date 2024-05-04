@@ -16,6 +16,9 @@ const MyOrdersPage = async () => {
     where: {
       userId: session.user.id,
     },
+    orderBy: {
+      createdAt: "desc",
+    },
     include: {
       restaurant: true,
       products: {

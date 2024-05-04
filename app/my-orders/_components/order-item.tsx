@@ -111,6 +111,16 @@ const OrderItem = ({ order }: OrderItemProps) => {
           <Separator />
         </div>
 
+        <div>
+          <span className="block text-xs text-muted-foreground">
+            {order.createdAt.toLocaleDateString("pt-BR")}
+          </span>
+        </div>
+
+        <div className="py-3">
+          <Separator />
+        </div>
+
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold">
             {formatCurrency(Number(order.totalPrice))}
