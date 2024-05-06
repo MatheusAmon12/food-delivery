@@ -7,7 +7,7 @@ import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { createOrder } from "../_actions/order";
 import { OrderStatus } from "@prisma/client";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import {
@@ -40,6 +40,9 @@ const Cart = ({ setIsOpen }: CartProps) => {
   const { data } = useSession();
 
   const handleConfirmationDialog = () => setIsConfirmDialogOpen(true);
+  const handleSignInClick = () => {
+    signIn("google");
+  };
 
   const handleFinishOrderClick = async () => {
     if (!data?.user) return;
@@ -149,13 +152,23 @@ const Cart = ({ setIsOpen }: CartProps) => {
               </Card>
             </div>
 
-            <Button
-              className="mt-6 w-full"
-              onClick={handleConfirmationDialog}
-              disabled={isSubmitLoading}
-            >
-              Finalizar pedido
-            </Button>
+            {data?.user ? (
+              <Button
+                className="mt-6 w-full"
+                onClick={handleConfirmationDialog}
+                disabled={isSubmitLoading}
+              >
+                Finalizar pedido
+              </Button>
+            ) : (
+              <Button
+                className="mt-6 w-full"
+                onClick={handleSignInClick}
+                disabled={isSubmitLoading}
+              >
+                Fazer Login
+              </Button>
+            )}
           </>
         ) : (
           <span>Carrinho vazio</span>
