@@ -113,7 +113,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
 
         <div>
           <span className="block text-xs text-muted-foreground">
-            {order.createdAt.toLocaleDateString("pt-BR")}
+            Realizado em {order.createdAt.toLocaleDateString("pt-BR")}
           </span>
         </div>
 
