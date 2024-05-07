@@ -8,6 +8,7 @@ import { ChevronRightIcon } from "lucide-react";
 import PromoBanner from "./_components/promo-banner";
 import RestaurantList from "./_components/restaurant-list";
 import Link from "next/link";
+import Image from "next/image";
 
 const fetch = async () => {
   const getProducts = await db.product.findMany({
@@ -49,8 +50,15 @@ const Home = async () => {
     <>
       <Header />
 
-      <div className="px-5 pt-6">
+      <div className="px-5 pt-6 xl:relative xl:h-[500px] xl:bg-primary xl:pb-[167px] xl:pl-32 xl:pt-[245px]">
         <Search />
+        <Image
+          src="/promo-banner-header.png"
+          alt="Está com fome?"
+          fill
+          quality={100}
+          className="object-cover"
+        />
       </div>
 
       <div className="px-5 pt-6">

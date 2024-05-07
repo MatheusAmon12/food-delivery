@@ -23,14 +23,17 @@ const Search = () => {
   };
 
   return (
-    <form className="flex gap-4" onSubmit={handleSearchSubmit}>
+    <form
+      className="flex gap-4 xl:relative xl:z-40 xl:w-[648px] xl:rounded-md xl:bg-white xl:px-6 xl:py-6"
+      onSubmit={handleSearchSubmit}
+    >
       <Input
         placeholder="Buscar restaurantes"
         className="border-none"
         onChange={handleChange}
         value={search}
       />
-      <Button size="icon" type="submit">
+      <Button size="icon" type="submit" className="xl:bg-[#FFB100]">
         <SearchIcon size={20} />
       </Button>
     </form>

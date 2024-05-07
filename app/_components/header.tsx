@@ -29,7 +29,7 @@ const Header = () => {
   const handleSignOutClick = () => signOut({ callbackUrl: "/" });
 
   return (
-    <div className="flex justify-between px-5 pt-6">
+    <div className="flex items-center justify-between px-5 pt-6 xl:px-32 xl:py-5">
       <Link href="/">
         <div className="relative h-[30px] w-[100px]">
           <Image
