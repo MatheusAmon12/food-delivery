@@ -17,6 +17,9 @@ const config = {
         "2xl": "1400px",
       },
     },
+    backgroundImage: {
+      "hungry-image": "url('/promo-banner-header.png')",
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
