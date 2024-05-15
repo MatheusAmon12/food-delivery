@@ -53,61 +53,60 @@ const Home = async () => {
         <Search />
       </div>
 
-      <div className="px-5 pt-6">
-        <CategoryList />
-      </div>
-
-      <div className="md:flex">
-        <div className="order-2 px-5 pt-6 lg:w-1/2">
-          <Link href={`/categories/${pizzasCategory?.id}/products`}>
-            <PromoBanner
-              src="/promo-banner-01.png"
-              alt="Até 30% de desconto em pizzas"
-            />
-          </Link>
+      <div className="lg:px-36">
+        <div className="px-5 pt-6">
+          <CategoryList />
         </div>
-        <div className="order-2 px-5 pt-6 lg:w-1/2">
-          <Link href={`/categories/${burguerCategory?.id}/products`}>
-            <PromoBanner
-              src="/promo-banner-02.png"
-              alt="A partir de R$17,90 em lanches"
-            />
-          </Link>
-        </div>
-      </div>
-
-      <div className="space-y-4 pt-6 lg:order-1">
-        <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold">Pedidos Recomendados</h2>
-          <Button
-            variant="ghost"
-            className="h-fit p-0 text-primary hover:bg-transparent"
-            asChild
-          >
-            <Link href="/products/recommended">
-              Ver todos
-              <ChevronRightIcon />
+        <div className="md:flex">
+          <div className="order-2 px-5 pt-6 lg:w-1/2">
+            <Link href={`/categories/${pizzasCategory?.id}/products`}>
+              <PromoBanner
+                src="/promo-banner-01.png"
+                alt="Até 30% de desconto em pizzas"
+              />
             </Link>
-          </Button>
-        </div>
-        <ProductList products={products} />
-      </div>
-
-      <div className="space-y-4 py-6 lg:order-3">
-        <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold">Restaurantes Recomendados</h2>
-          <Button
-            variant="ghost"
-            className="h-fit p-0 text-primary hover:bg-transparent"
-            asChild
-          >
-            <Link href={`/restaurant/recommended`}>
-              Ver todos
-              <ChevronRightIcon />
+          </div>
+          <div className="order-2 px-5 pt-6 lg:w-1/2">
+            <Link href={`/categories/${burguerCategory?.id}/products`}>
+              <PromoBanner
+                src="/promo-banner-02.png"
+                alt="A partir de R$17,90 em lanches"
+              />
             </Link>
-          </Button>
+          </div>
         </div>
-        <RestaurantList />
+        <div className="space-y-4 pt-6 lg:order-1">
+          <div className="flex items-center justify-between px-5">
+            <h2 className="font-semibold">Pedidos Recomendados</h2>
+            <Button
+              variant="ghost"
+              className="h-fit p-0 text-primary hover:bg-transparent"
+              asChild
+            >
+              <Link href="/products/recommended">
+                Ver todos
+                <ChevronRightIcon />
+              </Link>
+            </Button>
+          </div>
+          <ProductList products={products} />
+        </div>
+        <div className="space-y-4 py-6 lg:order-3">
+          <div className="flex items-center justify-between px-5">
+            <h2 className="font-semibold">Restaurantes Recomendados</h2>
+            <Button
+              variant="ghost"
+              className="h-fit p-0 text-primary hover:bg-transparent"
+              asChild
+            >
+              <Link href={`/restaurant/recommended`}>
+                Ver todos
+                <ChevronRightIcon />
+              </Link>
+            </Button>
+          </div>
+          <RestaurantList />
+        </div>
       </div>
     </div>
   );
