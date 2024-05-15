@@ -57,7 +57,7 @@ const Home = async () => {
         <div className="px-5 pt-6">
           <CategoryList />
         </div>
-        <div className="md:flex">
+        <div className="lg:flex lg:items-center lg:justify-between">
           <div className="order-2 px-5 pt-6 lg:w-1/2">
             <Link href={`/categories/${pizzasCategory?.id}/products`}>
               <PromoBanner

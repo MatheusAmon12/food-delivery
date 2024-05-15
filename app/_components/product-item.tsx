@@ -22,7 +22,7 @@ const ProductItem = ({ product, className }: ProductItemProps) => {
   return (
     <Link
       href={`/products/${product.id}`}
-      className={cn("w-[150px] min-w-[150px]", className)}
+      className={cn("w-[150px] min-w-[150px] lg:min-w-[180px]", className)}
     >
       <div className="w-full space-y-2">
         <div className="relative aspect-square w-full">
