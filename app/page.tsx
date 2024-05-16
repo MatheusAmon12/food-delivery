@@ -47,7 +47,7 @@ const Home = async () => {
 
   return (
     <div className="lg:flex lg:flex-col">
-      <Header />
+      <Header className="lg:hidden" />
 
       <div className="px-5 pt-6 lg:relative lg:h-[500px] lg:bg-primary lg:bg-hungry-image lg:bg-cover lg:pb-[167px] lg:pl-36 lg:pt-[245px]">
         <Search className="lg:relative lg:z-40 lg:w-[648px] lg:rounded-md lg:bg-white lg:px-6 lg:py-6" />
