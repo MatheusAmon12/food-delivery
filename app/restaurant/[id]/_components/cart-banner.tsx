@@ -32,7 +32,7 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
   if (!restaurantHasProductOnCart) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted bg-white p-5 pt-3 shadow-md">
+    <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted bg-white p-5 pt-3 shadow-md lg:px-36">
       <div className="flex items-center justify-between">
         <div className="">
           <span className="text-xs text-muted-foreground">
