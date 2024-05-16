@@ -5,23 +5,25 @@ import Image from "next/image";
 import { Button } from "@/app/_components/ui/button";
 import { ChevronLeftIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { cn } from "@/app/_lib/utils";
 
 interface ProductImageProps {
   product: Pick<Product, "name" | "imageUrl">;
+  className?: string;
 }
 
-const ProductImage = ({ product }: ProductImageProps) => {
+const ProductImage = ({ product, className }: ProductImageProps) => {
   const router = useRouter();
 
   const handleBackClick = () => router.back();
 
   return (
-    <div className="relative h-[360px] w-full">
+    <div className="relative h-[360px] w-full lg:h-auto">
       <Image
         src={product.imageUrl}
         alt={product.name}
         fill
-        className="object-cover"
+        className={cn("object-cover", className)}
       />
 
       <Button
