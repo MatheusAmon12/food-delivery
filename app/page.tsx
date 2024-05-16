@@ -49,7 +49,7 @@ const Home = async () => {
     <div className="lg:flex lg:flex-col">
       <Header />
 
-      <div className="lg:bg-right-center px-5 pt-6 lg:relative lg:h-[500px] lg:bg-primary lg:bg-hungry-image lg:bg-cover lg:pb-[167px] lg:pl-36 lg:pt-[245px]">
+      <div className="px-5 pt-6 lg:relative lg:h-[500px] lg:bg-primary lg:bg-hungry-image lg:bg-cover lg:pb-[167px] lg:pl-36 lg:pt-[245px]">
         <Search />
       </div>
 
@@ -57,8 +57,8 @@ const Home = async () => {
         <div className="px-5 pt-6">
           <CategoryList />
         </div>
-        <div className="lg:flex lg:items-center lg:justify-between">
-          <div className="order-2 px-5 pt-6 lg:w-1/2">
+        <div className="lg:flex lg:items-center lg:justify-between lg:gap-5">
+          <div className="order-2 px-5 pt-6 lg:w-1/2 lg:px-0">
             <Link href={`/categories/${pizzasCategory?.id}/products`}>
               <PromoBanner
                 src="/promo-banner-01.png"
@@ -66,7 +66,7 @@ const Home = async () => {
               />
             </Link>
           </div>
-          <div className="order-2 px-5 pt-6 lg:w-1/2">
+          <div className="order-2 px-5 pt-6 lg:w-1/2 lg:px-0">
             <Link href={`/categories/${burguerCategory?.id}/products`}>
               <PromoBanner
                 src="/promo-banner-02.png"
@@ -76,7 +76,7 @@ const Home = async () => {
           </div>
         </div>
         <div className="space-y-4 pt-6 lg:order-1">
-          <div className="flex items-center justify-between px-5">
+          <div className="flex items-center justify-between px-5 lg:px-0">
             <h2 className="font-semibold">Pedidos Recomendados</h2>
             <Button
               variant="ghost"
@@ -92,7 +92,7 @@ const Home = async () => {
           <ProductList products={products} />
         </div>
         <div className="space-y-4 py-6 lg:order-3">
-          <div className="flex items-center justify-between px-5">
+          <div className="flex items-center justify-between px-5 lg:px-0">
             <h2 className="font-semibold">Restaurantes Recomendados</h2>
             <Button
               variant="ghost"

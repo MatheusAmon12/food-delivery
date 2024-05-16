@@ -24,7 +24,7 @@ const Search = () => {
 
   return (
     <form
-      className="flex gap-4 xl:relative xl:z-40 xl:w-[648px] xl:rounded-md xl:bg-white xl:px-6 xl:py-6"
+      className="flex gap-4 lg:relative lg:z-40 lg:w-[648px] lg:rounded-md lg:bg-white lg:px-6 lg:py-6"
       onSubmit={handleSearchSubmit}
     >
       <Input
@@ -33,7 +33,7 @@ const Search = () => {
         onChange={handleChange}
         value={search}
       />
-      <Button size="icon" type="submit" className="xl:bg-[#FFB100]">
+      <Button size="icon" type="submit" className="lg:bg-[#FFB100]">
         <SearchIcon size={20} />
       </Button>
     </form>
