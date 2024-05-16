@@ -84,10 +84,10 @@ const ProductDetails = ({
 
   return (
     <>
-      <Header />
+      <Header className="hidden lg:block" />
       <div className="lg:px-36 lg:py-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-          <ProductImage product={product} className="rounded-lg" />
+          <ProductImage product={product} className="lg:rounded-lg" />
           <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl border-2 border-muted bg-white py-5 lg:mt-0 lg:rounded-lg">
             <div className="flex items-center gap-[0.375rem] px-5">
               <div className="relative h-6 w-6">

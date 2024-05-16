@@ -31,11 +31,11 @@ const Restaurants = ({ userFavoriteRestaurants }: RestaurantsProps) => {
   return (
     <>
       <Header />
-      <div className="px-6 py-6">
+      <div className="px-6 py-6 lg:px-36">
         <h2 className="mb-6 text-lg font-semibold">
           Restaurantes Recomendados
         </h2>
-        <div className="flex w-full flex-col gap-6">
+        <div className="flex w-full flex-col gap-6 lg:flex-row lg:flex-wrap lg:justify-between">
           {restaurants.map((restaurant) => (
             <RestaurantItem
               key={restaurant.id}
