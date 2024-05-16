@@ -84,7 +84,7 @@ const ProductDetails = ({
 
   return (
     <>
-      <Header className="hidden lg:block" />
+      <Header className="hidden lg:flex" />
       <div className="lg:px-36 lg:py-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">
           <ProductImage product={product} className="lg:rounded-lg" />

@@ -34,6 +34,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface HeaderProps {
   className?: string;
@@ -41,6 +43,16 @@ interface HeaderProps {
 
 const Header = ({ className }: HeaderProps) => {
   const { data } = useSession();
+  const router = useRouter();
+  const [currentPage, setCurrentPage] = useState<string>("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPage(window.location.pathname);
+    }
+  }, [router]);
+
+  console.log(currentPage);
 
   const handleSignInClick = (provider: string) => signIn(provider);
   const handleSignOutClick = () => signOut({ callbackUrl: "/" });
@@ -63,7 +75,9 @@ const Header = ({ className }: HeaderProps) => {
         </div>
       </Link>
 
-      <Search className="hidden lg:flex lg:min-w-[600px]" />
+      {currentPage !== "/" && (
+        <Search className="hidden lg:flex lg:min-w-[600px]" />
+      )}
 
       <Sheet>
         <SheetTrigger>
