@@ -5,8 +5,13 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { FormEventHandler, useState } from "react";
 import { useRouter } from "next/navigation";
+import { cn } from "../_lib/utils";
 
-const Search = () => {
+interface SearchProps {
+  className?: string;
+}
+
+const Search = ({ className }: SearchProps) => {
   const router = useRouter();
   const [search, setSearch] = useState("");
 
@@ -23,10 +28,7 @@ const Search = () => {
   };
 
   return (
-    <form
-      className="flex gap-4 lg:relative lg:z-40 lg:w-[648px] lg:rounded-md lg:bg-white lg:px-6 lg:py-6"
-      onSubmit={handleSearchSubmit}
-    >
+    <form className={cn("flex gap-4", className)} onSubmit={handleSearchSubmit}>
       <Input
         placeholder="Buscar restaurantes"
         className="border-none"

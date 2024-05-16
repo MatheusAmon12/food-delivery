@@ -50,7 +50,7 @@ const Home = async () => {
       <Header />
 
       <div className="px-5 pt-6 lg:relative lg:h-[500px] lg:bg-primary lg:bg-hungry-image lg:bg-cover lg:pb-[167px] lg:pl-36 lg:pt-[245px]">
-        <Search />
+        <Search className="lg:relative lg:z-40 lg:w-[648px] lg:rounded-md lg:bg-white lg:px-6 lg:py-6" />
       </div>
 
       <div className="lg:px-36">

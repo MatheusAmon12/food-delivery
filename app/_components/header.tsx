@@ -21,6 +21,7 @@ import {
 } from "./ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "@radix-ui/react-separator";
+import Search from "./search";
 
 const Header = () => {
   const { data } = useSession();
@@ -29,7 +30,7 @@ const Header = () => {
   const handleSignOutClick = () => signOut({ callbackUrl: "/" });
 
   return (
-    <div className="flex items-center justify-between px-5 pt-6 xl:px-32 xl:py-5">
+    <div className="flex items-center justify-between px-5 pt-6 lg:px-32 lg:py-5">
       <Link href="/">
         <div className="relative h-[30px] w-[100px]">
           <Image
@@ -40,6 +41,9 @@ const Header = () => {
           />
         </div>
       </Link>
+
+      <Search className="hidden lg:flex lg:min-w-[600px]" />
+
       <Sheet>
         <SheetTrigger>
           <Button
