@@ -42,7 +42,7 @@ interface HeaderProps {
 const Header = ({ className }: HeaderProps) => {
   const { data } = useSession();
 
-  const handleSignInClick = () => signIn("google");
+  const handleSignInClick = (provider: string) => signIn(provider);
   const handleSignOutClick = () => signOut({ callbackUrl: "/" });
 
   return (
@@ -110,9 +110,53 @@ const Header = ({ className }: HeaderProps) => {
                 <>
                   <div className="flex items-center justify-between pt-10">
                     <h2>Olá! Faça o seu login</h2>
-                    <Button size="icon">
-                      <LogInIcon onClick={handleSignInClick} />
-                    </Button>
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button size="icon">
+                          <LogInIcon />
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle className="text-center font-semibold">
+                            Faça login na plataforma!
+                          </AlertDialogTitle>
+                          <AlertDialogDescription className="text-center text-sm text-muted-foreground">
+                            Conecte-se usando sua conta do Google ou GitHub.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter className="flex flex-row items-center justify-between gap-3">
+                          <AlertDialogAction
+                            className="w-1/2 gap-2 border-[1px] border-primary bg-transparent hover:border-2 hover:bg-transparent"
+                            onClick={() => handleSignInClick("github")}
+                          >
+                            <Image
+                              src="/github.svg"
+                              width={16}
+                              height={16}
+                              alt="GitHub"
+                            />
+                            <span className="text-sm font-semibold text-primary">
+                              GitHub
+                            </span>
+                          </AlertDialogAction>
+                          <AlertDialogAction
+                            className="w-1/2 gap-2 border-[1px] border-primary bg-transparent hover:border-2 hover:bg-transparent"
+                            onClick={() => handleSignInClick("google")}
+                          >
+                            <Image
+                              src="/google.svg"
+                              width={16}
+                              height={16}
+                              alt="Google"
+                            />
+                            <span className="text-sm font-semibold text-primary">
+                              Google
+                            </span>
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
                   </div>
                 </>
               )}
