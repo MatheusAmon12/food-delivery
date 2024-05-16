@@ -23,11 +23,11 @@ const MyFavoriteRestaurants = async () => {
   return (
     <>
       <Header />
-      <div className="px-6 py-6">
+      <div className="px-6 py-6 lg:px-36">
         <h2 className="mb-6 text-lg font-semibold">
           Restaurantes Recomendados
         </h2>
-        <div className="flex w-full flex-col gap-6">
+        <div className="flex w-full flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-[21px]">
           {userFavoriteRestaurants.length > 0 ? (
             userFavoriteRestaurants.map(({ restaurant }) => (
               <RestaurantItem
