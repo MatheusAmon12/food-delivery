@@ -22,15 +22,25 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "@radix-ui/react-separator";
 import Search from "./search";
+import { cn } from "../_lib/utils";
 
-const Header = () => {
+interface HeaderProps {
+  className?: string;
+}
+
+const Header = ({ className }: HeaderProps) => {
   const { data } = useSession();
 
   const handleSignInClick = () => signIn("google");
   const handleSignOutClick = () => signOut({ callbackUrl: "/" });
 
   return (
-    <div className="flex items-center justify-between px-5 pt-6 lg:px-32 lg:py-5">
+    <div
+      className={cn(
+        "flex items-center justify-between px-5 pt-6 lg:px-32 lg:py-5",
+        className,
+      )}
+    >
       <Link href="/">
         <div className="relative h-[30px] w-[100px]">
           <Image
