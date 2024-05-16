@@ -65,7 +65,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
 
   return (
     <>
-      <Header className="sm:hidden lg:flex" />
+      <Header className="hidden lg:flex" />
       <div className="lg:px-36 lg:pt-10">
         <div className="lg:flex lg:min-h-[380px] lg:space-x-8 lg:pb-8">
           <RestaurantImage
