@@ -30,7 +30,9 @@ const DeliveryInfo = ({ restaurant }: DeliveryInfoProps) => {
             <span className="text-sx">Tempo</span>
             <TimerIcon size={14} />
           </div>
-          {Number(restaurant.deliveryTimeMinutes)} min
+          <p className="text-xs font-semibold">
+            {Number(restaurant.deliveryTimeMinutes)} min
+          </p>
         </div>
       </Card>
     </div>

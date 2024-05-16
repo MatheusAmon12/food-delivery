@@ -64,13 +64,13 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
 
   return (
     <div className="lg:px-36 lg:pt-10">
-      <div className="lg:flex lg:min-h-[380px] lg:space-x-8">
+      <div className="lg:flex lg:min-h-[380px] lg:space-x-8 lg:pb-8">
         <RestaurantImage
           restaurant={restaurant}
           userFavoriteRestaurants={userFavoriteRestaurants}
         />
         <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white py-5 lg:block lg:w-[402px]">
-          <div className="flex items-center justify-between px-5 pt-5 ">
+          <div className="flex items-center justify-between px-5 pt-5 lg:pt-0 ">
             <div className="flex items-center gap-[0.375rem]">
               <div className="relative h-8 w-8">
                 <Image
