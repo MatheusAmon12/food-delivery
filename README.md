@@ -107,4 +107,30 @@ Projeto de um sistema de delivery semelhante ao Ifood. No contexto desse projeto
     - `app/my-orders`
         `/components/order-item.tsx` item de um pedido
         `page.tsx` renderiza os pedidos
-    
+    - `app/products/[id]`
+        - `components`
+            - `product-details.tsx` página do produto
+            - `product-image.tsx` imagem do produto no topo da página
+        - `page.tsx` renderiza o conteúdo da página'
+    - `app/products/recommended`
+        - `page.tsx` renderiza os produtos recomendados
+    - `app/restaurant`
+        - `_actions`
+            - `search.ts` busca por restaurantes no banco de dados
+        - `_components`
+            - `restaurants.tsx` renderiza os restaurantes recomendados
+        - `[id]` 
+            - `_components` 
+                - `cart-banner.tsx` renderiza o banner do carrinho apenas nas página do restaurante ao qual os pedidos pertencem
+                - `restaurant-image.tsx` imagem do restaurante no topo da página
+        - `recommended`
+            - `page.tsx` renderiza os restaurantes recomendados
+        - `page.tsx` renderiza os restaurantes
+    - `app/globals.css` estilos globais
+    - `app/layout.tsx` layout/template da página
+    - `app/page.tsx` renderiza a home do projeto
+    - `prisma/`	
+        - `migrations` contém o histórico de migrations realizadas no decorrer do projeto
+        - `schema.prisma` contém o esquema do banco de dados
+        - `seed.ts` seed do banco de dados, contendo todos os dados necessários para o projeto
+    - `public/` arquivos de imagens e vetores utilizados pelo projeto    
