@@ -1,4 +1,34 @@
-# FSW Foods
+<div style="text-align: center;">
+    <h1>FSW Foods</h1>
+</div>
+
+<div style="text-align: center;">
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style-plastic-green&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style-plastic-green&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style-plastic-green&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=style-plastic-green&logo=tailwind-css&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-%23ECC94B.svg?style=&logo=Prisma&logoColor=blue)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=style-plastic-green&logo=postgresql&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=style-plastic-green&logo=google-cloud&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style-plastic-green&logo=github&logoColor=white)
+
+</div>
+
+<div style="display: flex; justify-content: center;">
+<div>
+
+![Mockup Desktop](/public/mockup-desktop.png)
+
+</div>
+
+<div>
+
+![Mockup Mobile](/public/mockup-smartphone.png)
+
+</div>
+</div>
+
 
 ## Descrição
 
