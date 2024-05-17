@@ -16,17 +16,9 @@
 </div>
 
 <div style="display: flex; justify-content: center;">
-<div>
 
 ![Mockup Desktop](/public/mockup-desktop.png)
 
-</div>
-
-<div>
-
-![Mockup Mobile](/public/mockup-smartphone.png)
-
-</div>
 </div>
 
 
